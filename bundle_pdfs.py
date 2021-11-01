@@ -97,7 +97,7 @@ for row in Req.jsonData:
 		# send back to onevizion
 		updateFields = {}
 		updateFields[MainDestFileFieldName] = onevizion.EFileEncode(filename)
-		#updateFields[MainStatusFieldName] = 'Success'
+		updateFields[MainStatusFieldName] = 'Success'
 		Req.update(
 			filters = {'TRACKOR_ID' : row['TRACKOR_ID']},
 			fields = updateFields
@@ -111,7 +111,7 @@ for row in Req.jsonData:
 		# send back to onevizion
 		updateFields = {}
 		updateFields[MainErrorFieldName] = errors
-		#updateFields[MainStatusFieldName] = 'Error'
+		updateFields[MainStatusFieldName] = 'Error'
 		Req.update(
 			filters = {'TRACKOR_ID' : row['TRACKOR_ID']},
 			fields = updateFields
