@@ -25,7 +25,7 @@ try:
 	MainFields = params['MainTrackor']['Fields']
 	MainFilters = params['MainTrackor']['Filters']
 	MainSort = params['MainTrackor']['Sort']
-	MainFirstFileFieldName = params['MainTrackor']['FirstFileFieldName']
+	MainSourceFileFieldName = params['MainTrackor']['SourceFileFieldName']
 	MainDestFileFieldName = params['MainTrackor']['DestFileFieldName']
 	MainStatusFieldName = params['MainTrackor']['StatusField']
 	MainErrorFieldName = params['MainTrackor']['ErrorField']
@@ -57,7 +57,7 @@ for row in Req.jsonData:
 	filename = ""
 
 	try:
-		fname = Req.GetFile(trackorId=row['TRACKOR_ID'], fieldName = MainFirstFileFieldName)
+		fname = Req.GetFile(trackorId=row['TRACKOR_ID'], fieldName = MainSourceFileFieldName)
 		# add to the pdf
 		mergeFile.append(PyPDF2.PdfFileReader(fname, 'rb'))
 
