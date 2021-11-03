@@ -2,6 +2,7 @@
 
 import json
 import os
+import re
 import onevizion
 import PyPDF2
 import datetime
@@ -79,6 +80,8 @@ for row in Req.jsonData:
 			# download the file
 			print(cdoc)
 			fname = cdocs.GetFile(trackorId=cdoc['TRACKOR_ID'], fieldName = ChildFileFieldName)
+			if re.search('.pdf', fname) is None:
+				continue
 			# add to the pdf
 			mergeFile.append(PyPDF2.PdfFileReader(fname, 'rb'))
 
