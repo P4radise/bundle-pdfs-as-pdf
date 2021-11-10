@@ -1,4 +1,4 @@
-command = python3 bundle_pdfs.py
+command = python3 bundle_pdfs_integration.py
 settings_file_name = settings.json
 default_schedule = 0 0/5 * * * ?
 read_from_stdout = true
