@@ -1,27 +1,28 @@
 {
-	"OV":
-		{
-			"UserName":"service-account",
-			"Password":"******",
-			"Url":"xxx.onevizion.com"
-		},
-	"MainTrackor":
-		{
-			"TrackorType":"LTC",
-			"Fields" : ["TRACKOR_KEY","LTC_COMPLETE_TITLE_PACKET_STAT"],
-			"Filters" : {"LTC_COMPLETE_TITLE_PACKET_STAT":"Queued"},
-			"Sort" : {"TRACKOR_KEY":"ASC"},
-			"FirstFileFieldName" : "LTC_COMPLETED_LTC_DOCUMENT",
-			"DestFileFieldName" : "LTC_COMPLETED_LTC_PACKET",
-			"StatusField" : "LTC_COMPLETE_TITLE_PACKET_STAT",
-			"ErrorField" : "LTC_COMPLETE_TITLE_PACKET_ERRO"
-		},
-	"ChildTrackor":
-		{
-			"TrackorType":"Title_Documents",
-			"Fields" : ["TDOC_RECORDED_DATE", "TDOC_BOOKPAGE", "TDOC_PAGE", "TDOC_CLERKS_FILE__DOCUMENT_", "TRACKOR_KEY"],
-			"Filters" : {"TDOC_DOCUMENT_FILE": "not null"},
-			"Sort" : {"TDOC_RECORDED_DATE":"ASC", "TDOC_BOOKPAGE": "ASC", "TDOC_PAGE": "ASC", "TDOC_CLERKS_FILE__DOCUMENT_":"ASC"},
-			"FileFieldName" : "TDOC_DOCUMENT_FILE"
-		}
+    "OV": {
+        "urlOneVizion":"xxx.onevizion.com",
+        "ovAccessKey":"",
+        "ovSecretKey":""
+    },
+    "mainTrackor": {
+        "TrackorType":"LTC",
+        "Fields" : ["TRACKOR_KEY","LTC_COMPLETE_TITLE_PACKET_STAT"],
+        "Filters" : {"LTC_COMPLETE_TITLE_PACKET_STAT":"Queued"},
+        "Sort" : {"TRACKOR_KEY":"ASC"},
+        "SourceFileFieldName" : "LTC_COMPLETED_LTC_DOCUMENT",
+        "DestFileFieldName" : "LTC_COMPLETED_LTC_PACKET",
+        "StatusField" : "LTC_COMPLETE_TITLE_PACKET_STAT",
+        "ErrorField" : "LTC_COMPLETE_TITLE_PACKET_ERRO"
+    },
+    "childTrackor": {
+        "TrackorType":"Title_Documents",
+        "Fields" : ["TDOC_RECORDED_DATE", "TDOC_BOOKPAGE", "TDOC_PAGE", "TDOC_CLERKS_FILE__DOCUMENT_", "TRACKOR_KEY"],
+        "Filters" : {"TDOC_DOCUMENT_FILE": "not null"},
+        "Sort" : {"TDOC_RECORDED_DATE":"ASC", "TDOC_BOOKPAGE": "ASC", "TDOC_PAGE": "ASC", "TDOC_CLERKS_FILE__DOCUMENT_":"ASC"},
+        "FileFieldName" : "TDOC_DOCUMENT_FILE"
+    },
+    "mainStatuses": {
+        "success": "Success",
+        "error": "Error"
+    }
 }

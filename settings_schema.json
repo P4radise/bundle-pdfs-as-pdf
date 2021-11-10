@@ -1,0 +1,99 @@
+{
+    "type": "object",
+    "properties": {
+        "OV": {
+            "type": "object",
+            "properties": {
+                "urlOneVizion": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "ovAccessKey": {
+                    "type": "string",
+                    "minLength" : 20,
+                    "maxLength" : 20
+                },
+                "ovSecretKey" : {
+                    "type" : "string",
+                    "minLength" : 70,
+                    "maxLength" : 70
+                }
+            }
+        },
+        "mainTrackor": {
+            "type": "object",
+            "properties": {
+                "UserName": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "Fields": {
+                    "type": "array",
+                    "minLength": 1
+                },
+                "Filters": {
+                    "type": "object",
+                    "minLength": 1
+                },
+                "Sort": {
+                    "type": "object",
+                    "minLength": 1
+                },
+                "SourceFileFieldName": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "DestFileFieldName": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "StatusField": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "ErrorField": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "childTrackor": {
+            "type": "object",
+            "properties": {
+                "TrackorType": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "Fields": {
+                    "type": "array",
+                    "minLength": 1
+                },
+                "Filters": {
+                    "type": "object",
+                    "minLength": 1
+                },
+                "Sort": {
+                    "type": "object",
+                    "minLength": 1
+                },
+                "FileFieldName": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "mainStatuses": {
+            "type": "object",
+            "properties": {
+                "success": {
+                    "type": "string",
+                    "minLength": 1
+                },
+                "error": {
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        }
+    }
+}
