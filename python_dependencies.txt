@@ -1,0 +1,3 @@
+jsonschema==3.2.0
+onevizion==1.0.35
+PyPDF2==1.26.0
